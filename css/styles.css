@@ -1,0 +1,101 @@
+/* 1. Variables del proyecto */
+:root {
+    --color-primario: #6f4e37;
+    --color-acento: #d9822b;
+    --color-texto: #2b2b2b;
+    --color-fondo: #f6efe6;
+    --fuente-base: "Poppins", Arial, sans-serif;
+}
+
+/* 2. Base */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: var(--fuente-base);
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+    line-height: 1.6;
+}
+
+/* 3. Encabezado y navegación */
+header {
+    padding: 1rem 2rem;
+    background-color: var(--color-primario);
+    color: #fff;
+}
+
+header a {
+    color: #fff;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+nav a:hover,
+nav a:focus {
+    color: var(--color-acento);
+}
+
+/* 4. Contenido */
+main {
+    max-width: 60rem;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.tarjeta {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 0.5rem;
+    background-color: #fff;
+}
+
+.perfil {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.perfil img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th,
+td {
+    padding: 0.6rem;
+    border-bottom: 1px solid var(--color-fondo);
+}
+
+a {
+    color: var(--color-primario);
+}
+
+@media (max-width: 30rem) {
+    header {
+        padding: 1rem;
+    }
+
+    .perfil {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .tarjeta {
+        padding: 1rem;
+    }
+}
